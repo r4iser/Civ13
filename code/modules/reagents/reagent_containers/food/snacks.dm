@@ -1751,7 +1751,7 @@
 	nutriment_amt = 3
 	nutriment_desc = list("salt" = 3, "animal fat" = 2, "meat" = 2)
 	non_vegetarian = TRUE
-	decay = 180*600
+	decay = 180*900
 	satisfaction = 4
 	New()
 		..()
