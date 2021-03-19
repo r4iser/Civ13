@@ -505,6 +505,8 @@
 					if (!istype(src, /mob/living/simple_animal/crab))
 						if(src.has_fat)
 							var/fat_calc = (namt + fat_extra) - fat_penalty
+							if(istype(src, /mob/living/simple_animal/hostile/bear) && season == "WINTER")
+								fat_calc += fat_calc * 0.5 //Adds 50% more fat for the bear during the winter
 							if(!fat_calc <= 0)
 								for (var/i=0, i<=fat_calc, i++) //Fat drop
 									var/obj/item/weapon/reagent_containers/food/snacks/animalfat/fat = new/obj/item/weapon/reagent_containers/food/snacks/animalfat(get_turf(src))
